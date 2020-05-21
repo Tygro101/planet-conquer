@@ -1,0 +1,25 @@
+.engine-wrapper {
+    z-index: 0;
+    position: absolute;
+    background: rgb(10, 13, 54);
+    background: linear-gradient(180deg, rgba(21, 25, 74, 1) 0%, rgba(21, 25, 74, 1) 23%, rgba(0, 0, 0, 1) 100%);
+}
+.ui-wrapper {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    * {
+        z-index: 10;
+    }
+    .fps-wrapper {
+        z-index: 10;
+        font-family: vibes;
+        padding: 5px;
+        color: rgb(253, 253, 253);
+        font-size: 20px;
+    }
+
+    .login-wrapper{
+        width: 100%;
+    }
+}

@@ -1,0 +1,26 @@
+.wrapper {
+    z-index: 10;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    .button {
+        width: 50px;
+        height: 20px;
+        background: grey;
+    }
+
+    .shell {
+        min-width: 500px;
+        min-height: 250px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.205);
+        .title {
+            font-family: vibes;
+            line-height: 40px;
+            color: white;
+            text-align: center;
+        }
+    }
+}
