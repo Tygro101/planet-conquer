@@ -1081,7 +1081,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function getObject(obxName) {
           switch (obxName) {
             case ObxNames.WORLD:
-              return "https://tygro101.github.io/planet-conquer/game";
+              return "https://tygro101.github.io/planet-conquer/assets/3ds/worlds/planetv3.glb";
 
             case ObxNames.TEMP:
               return "/assets/obj/floor.fbx";

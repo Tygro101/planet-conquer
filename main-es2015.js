@@ -565,7 +565,7 @@ class ObxLoaderService {
     getObject(obxName) {
         switch (obxName) {
             case ObxNames.WORLD:
-                return "https://tygro101.github.io/planet-conquer/game";
+                return "https://tygro101.github.io/planet-conquer/assets/3ds/worlds/planetv3.glb";
             case ObxNames.TEMP:
                 return "/assets/obj/floor.fbx";
             case ObxNames.WORLD_WITH_SUN:
