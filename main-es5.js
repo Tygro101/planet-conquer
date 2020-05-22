@@ -80,10 +80,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     "./src/app/components/game-engine/game-engine.component.ts");
 
     var routes = [{
-      path: '/login',
+      path: 'login',
       component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_2__["LoginComponent"]
     }, {
-      path: '/game',
+      path: 'game',
       component: _components_game_engine_game_engine_component__WEBPACK_IMPORTED_MODULE_3__["GameEngineComponent"]
     }, //{ path: 'second-component', component: SecondComponent },
     {

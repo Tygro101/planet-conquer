@@ -44,8 +44,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: '/login', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_2__["LoginComponent"] },
-    { path: '/game', component: _components_game_engine_game_engine_component__WEBPACK_IMPORTED_MODULE_3__["GameEngineComponent"] },
+    { path: 'login', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_2__["LoginComponent"] },
+    { path: 'game', component: _components_game_engine_game_engine_component__WEBPACK_IMPORTED_MODULE_3__["GameEngineComponent"] },
     //{ path: 'second-component', component: SecondComponent },
     { path: '', redirectTo: 'game', pathMatch: 'full' },
     { path: '**', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_2__["LoginComponent"] },
