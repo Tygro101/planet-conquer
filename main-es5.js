@@ -168,8 +168,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var AppComponent = function AppComponent() {
       _classCallCheck(this, AppComponent);
-
-      this.title = 'client';
     };
 
     AppComponent.ɵfac = function AppComponent_Factory(t) {
@@ -1083,7 +1081,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function getObject(obxName) {
           switch (obxName) {
             case ObxNames.WORLD:
-              return "/assets/3ds/worlds/planetv3.glb";
+              return "https://github.com/Tygro101/planet-conquer/raw/master/src/assets/3ds/worlds/planetv3.glb";
 
             case ObxNames.TEMP:
               return "/assets/obj/floor.fbx";

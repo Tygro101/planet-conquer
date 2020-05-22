@@ -84,9 +84,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class AppComponent {
-    constructor() {
-        this.title = 'client';
-    }
 }
 AppComponent.ɵfac = function AppComponent_Factory(t) { return new (t || AppComponent)(); };
 AppComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AppComponent, selectors: [["app-root"]], decls: 1, vars: 0, template: function AppComponent_Template(rf, ctx) { if (rf & 1) {
@@ -568,7 +565,7 @@ class ObxLoaderService {
     getObject(obxName) {
         switch (obxName) {
             case ObxNames.WORLD:
-                return "/assets/3ds/worlds/planetv3.glb";
+                return "https://github.com/Tygro101/planet-conquer/raw/master/src/assets/3ds/worlds/planetv3.glb";
             case ObxNames.TEMP:
                 return "/assets/obj/floor.fbx";
             case ObxNames.WORLD_WITH_SUN:
