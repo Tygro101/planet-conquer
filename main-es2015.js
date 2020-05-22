@@ -44,10 +44,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const routes = [
-    { path: 'login', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_2__["LoginComponent"] },
-    { path: 'game', component: _components_game_engine_game_engine_component__WEBPACK_IMPORTED_MODULE_3__["GameEngineComponent"] },
+    { path: '/login', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_2__["LoginComponent"] },
+    { path: '/game', component: _components_game_engine_game_engine_component__WEBPACK_IMPORTED_MODULE_3__["GameEngineComponent"] },
     //{ path: 'second-component', component: SecondComponent },
-    { path: '', redirectTo: '/game', pathMatch: 'full' },
+    { path: '', redirectTo: 'game', pathMatch: 'full' },
     { path: '**', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_2__["LoginComponent"] },
     { path: '**', component: _components_login_login_component__WEBPACK_IMPORTED_MODULE_2__["LoginComponent"] },
 ];
@@ -515,6 +515,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var three_examples_jsm_loaders_OBJLoader_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! three/examples/jsm/loaders/OBJLoader.js */ "./node_modules/three/examples/jsm/loaders/OBJLoader.js");
 /* harmony import */ var three_examples_jsm_loaders_FBXLoader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! three/examples/jsm/loaders/FBXLoader */ "./node_modules/three/examples/jsm/loaders/FBXLoader.js");
 /* harmony import */ var three_examples_jsm_loaders_GLTFLoader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! three/examples/jsm/loaders/GLTFLoader */ "./node_modules/three/examples/jsm/loaders/GLTFLoader.js");
+/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/environments/environment */ "./src/environments/environment.ts");
+
 
 
 
@@ -565,7 +567,10 @@ class ObxLoaderService {
     getObject(obxName) {
         switch (obxName) {
             case ObxNames.WORLD:
-                return "https://tygro101.github.io/planet-conquer/assets/3ds/worlds/planetv3.glb";
+                if (src_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].production)
+                    return "https://tygro101.github.io/planet-conquer/assets/3ds/worlds/planetv3.glb";
+                else
+                    return "/assets/3ds/worlds/planetv3.glb";
             case ObxNames.TEMP:
                 return "/assets/obj/floor.fbx";
             case ObxNames.WORLD_WITH_SUN:
