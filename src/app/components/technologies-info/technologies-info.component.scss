@@ -1,0 +1,21 @@
+.grid-container {
+    grid-row-gap: 10px;
+    font-family: parik;
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 5fr;
+    color: rgb(54, 54, 54);
+    font-size: 14px;
+    font-weight: 700;
+    align-items: center;
+    background: #ffffff7a;
+    padding: 5px;
+    .grid-img-wrapper {
+        
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        .grid-img {
+            width: 20px;
+        }
+    }
+}

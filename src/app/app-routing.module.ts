@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'game', component: GameEngineComponent },
   //{ path: 'second-component', component: SecondComponent },
-  { path: '',   redirectTo: '/game', pathMatch: 'full' }, // redirect to `first-component`
+  { path: '',   redirectTo: 'game', pathMatch: 'full' }, // redirect to `first-component`
   { path: '**', component: LoginComponent },
   { path: '**', component: LoginComponent },  // Wildcard route for a 404 page
 ];

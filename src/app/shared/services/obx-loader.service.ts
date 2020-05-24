@@ -2,7 +2,8 @@ import { Injectable, OnDestroy } from '@angular/core';
 import { Object3D, Scene, Group, Mesh, MaterialLoader, Vector3, Loader } from 'three';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { GLTFLoader, GLTFParser } from 'three/examples/jsm/loaders/GLTFLoader';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -25,14 +26,14 @@ export class ObxLoaderService implements OnDestroy {
     const loader = this.getLoader(type) as any;
     const objectPath = this.getObject(obxName);
     loader.load(objectPath, (group) => {
-      
-      if(type === ObxTypes.GLTF){
+
+      if (type === ObxTypes.GLTF) {
         group.scene.castShadow = true;
         group.scene.receiveShadow = true;
         //group.scene.scale.set(0.2,0.2,0.2)
         scene.add(group.scene);
         this.runningObjects.push(group.scene);
-      }else{
+      } else {
         //group.position.set(0,0,0);
         scene.add(group);
         this.runningObjects.push(group);
@@ -57,7 +58,9 @@ export class ObxLoaderService implements OnDestroy {
   private getObject(obxName: ObxNames) {
     switch (obxName) {
       case ObxNames.WORLD:
-        return "/assets/3ds/worlds/planetv3.glb";
+        if (environment.production)
+          return "/planet-conquer/assets/3ds/worlds/login-planet.glb";
+        else return "/assets/3ds/worlds/login-planet.glb";
       case ObxNames.TEMP:
         return "/assets/obj/floor.fbx";
       case ObxNames.WORLD_WITH_SUN:
@@ -66,9 +69,9 @@ export class ObxLoaderService implements OnDestroy {
   }
 
   update(dt: number): void {
-    this.runningObjects.forEach(item=>{
+    this.runningObjects.forEach(item => {
       //item.rotation.x += dt/6;
-      item.rotation.y += dt/7;
+      item.rotation.y += dt / 7;
       //item.rotation.z += dt/9;
     })
   }
@@ -84,5 +87,5 @@ export enum ObxNames {
 export enum ObxTypes {
   OBJ = "obj",
   FBX = "fbx",
-  GLTF ="gltf"
+  GLTF = "gltf"
 }
